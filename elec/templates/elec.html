@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for electronic in electronics %}
+<div class="container">
+
+    <div class="d-flex justify-content-center flex-column" dir="ltr">
+        {% for electronic in electronics %}
+        <div class="card m-2 d-flex flex-row" style="width: 100%; height: min-content;">
+            <img src="{{ electronic.image }}" class="card-img-left" alt="..." style="width: 8rem; height: 8rem; object-fit: cover;">
+            <div class="card-body">
+                <h5 class="card-title">{{ electronic.name }}</h5>
+                <p class="card-text" style="font-size: smaller;">{{ electronic.description }}</p>
+                <h6>{{ electronic.price }}</h6>
+            </div>
+            <div class="d-flex align-items-center">
+                <button class="btn btn-outline-success me-4" style="height: min-content; "> مزيد من التفاصيل</button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endfor %}
+{% endblock %}

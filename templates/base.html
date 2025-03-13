@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        *{
+          font-family: 'Almarai';
+        }
+        .footer {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          white-space: nowrap;
+          line-height: 60px;
+        }
+        a{
+          text-decoration: none;
+          color:white;
+          font-size: 18px;
+          
+          
+        }
+      </style>
+
+</head>
+<body dir="rtl">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+            <div class="container">
+                <a class="navbar-brand nav-link" href="#">المتجر المنزلي</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row list-unstyled">
+                <li class="nav-item ">
+                    <a class="nav-link active" aria-current="page" href="#">الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-3" href="#">من نحن</a>
+                </li>                             
+                <li class="nav-item">
+                    <a class="nav-link" href="#">اتصل بنا</a>
+                </li>
+            </ul>
+                
+            </div>
+        </nav>
+    </header>
+    
+{% block content %}
+
+
+
+{% endblock %}
+
+    <footer class="footer bg-body-tertiary text-center text-lg-start"></footer>
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+          © 2020 Copyright:
+          <a class="text-body" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+</body>
+</html>
