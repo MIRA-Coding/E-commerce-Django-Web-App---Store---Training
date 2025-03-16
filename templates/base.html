@@ -34,21 +34,23 @@
 <body dir="rtl">
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand nav-link" href="#">المتجر المنزلي</a>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row list-unstyled">
-                <li class="nav-item ">
-                    <a class="nav-link active" aria-current="page" href="#">الرئيسية</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link mx-3" href="#">من نحن</a>
-                </li>                             
-                <li class="nav-item">
-                    <a class="nav-link" href="#">اتصل بنا</a>
-                </li>
-            </ul>
-                
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row list-unstyled">
+                    <li class="nav-item ">
+                        <a class="nav-link active" aria-current="page" href="#">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-3" href="#">من نحن</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">اتصل بنا</a>
+                        </li><li class="nav-item">
+                        <a class="nav-link" href="{% url 'showphone' phone='iphon 18.0'  %}"> الهواتف</a>
+                    </li>
+                    
+                </ul>
+        
             </div>
         </nav>
     </header>

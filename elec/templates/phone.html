@@ -1,0 +1,13 @@
+{% exend base.html%}
+
+{% block content %}
+{% csrf_token %} # هذي عشان ما ينعبط مكان الادخال
+<!-- here button -->
+ <form method="POST" action="/showphone/">
+    {% csrf_token %}
+    <div class="container">
+       <input type="text" name="title" id=""> # العنوان هنا هو اللي نحطه في الفيو في ال git[]
+         <button type="submit">search</button>
+        {{%ph%}}
+
+{% endblock %}

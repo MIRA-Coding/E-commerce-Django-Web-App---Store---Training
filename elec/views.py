@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
+from django.views.decorators.csrf import csrf_exempt # في جانب الفرونت والباك اند نحط هذي عشان محد يحاول يسوي عليها ضغط
 # Create your views here.
 
 def list_elec(request):
@@ -19,3 +20,17 @@ def list_elec(request):
 # ممكن تكون 
 # temmplate=loader.get_template('elec.html')
 # return HttpResponse(template.render(context,request))
+
+
+def showphone(request, phone):
+    template=loader.get_template('phone.html')
+    value = {
+        'ph': phone
+    }
+
+
+def showphone(request):
+    template=loader.get_template('phone.html')
+    value = request.get['title']
+    return HttpResponse(template.render(value,request))
+#    print(value) # هنا نطبع القيمة اللي جاها من الفرونت اند في التيرمينال 
