@@ -17,13 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from home import views as home_views
-from beauty import views as beauty_views
+# from beauty import views as beauty_views
 from elec import views as elec_views
-from furniture import views as furniture_views
-from kitchen import views as kitchen_views
+# from furniture import views as furniture_views
+# from kitchen import views as kitchen_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home_views.index, name='home'),
+    path('', home_views.index, name='home'), # نعطيه اسم لما نبغا نربطه بداخل صفحة html 
     path('elec/', elec_views.list_elec, name='elec'),
+    path('showphone/<str:phone>/', elec_views.showphone, name='showphone'),
 ]
